@@ -23,3 +23,10 @@ li material-fab {
 .done {
   text-decoration: line-through;
 }
+#name{height: 40px;
+  width:100px;
+  background-color: white;
+  color: darkorange;
+  font: 20px sans-serif;
+vertical-align: middle;
+}
