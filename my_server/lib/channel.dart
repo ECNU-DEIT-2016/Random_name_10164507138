@@ -54,18 +54,20 @@ class MyController extends ResourceController {
   }
   int getRandomNum(){
     var random=Random();
-    int number=random.nextInt(12);
-    return number;
-}
+  int number=random.nextInt(12);
+  return number;
+   }
 Future connect(List<String> names) async{
   var s = ConnectionSettings(
-    user: "root",
-    password: "Kexin10220133@",
-    host: "localhost",
+    user: "deit2016",
+    password: "deit2016@ecnu",
+    host: "www.muedu.org",
     port: 3306,
-    db: "example",
+    db: "deit2016db_10164507138",
   );
+  print("openning connection......");
   var conn = await MySqlConnection.connect(s);
+  print("opened......");
   Results result =
       await conn.execute('SELECT id,name, FROM students');
   result.forEach( (f) => names.add(f.toString()) );
