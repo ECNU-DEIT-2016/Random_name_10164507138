@@ -1,5 +1,6 @@
 import 'my_server.dart';
 import 'dart:math';
+import 'package:sqljocky5/sqljocky.dart';
 
 /// This type initializes an application.
 ///
@@ -62,7 +63,7 @@ Future connect(List<String> names) async{
     password: "Kexin10220133@",
     host: "localhost",
     port: 3306,
-    db: "random",
+    db: "example",
   );
   var conn = await MySqlConnection.connect(s);
   Results result =
